@@ -14,6 +14,15 @@ Person_Name varchar (100) not null,
 Person_Age int
 );
 
+Insert into Person  
+(Person_ID, Person_Name, Person_Age) Values
+ (100, "Edward", 22),
+  (101, "Robertson", 18),
+   (102, "Maxwell", 10),
+    (103, "Lectricia", 42), 
+    (104, "Sarah", 40);
+
+
 create table Orders
 (Order_ID int not null,
 Order_Name varchar (100) not null, 
@@ -22,6 +31,7 @@ Person_ID int,
 Primary Key (Order_ID),
 Foreign Key (Person_ID) References Person (Person_ID)
 );
+
 
 /* To allow naming of a FOREIGN KEY constraint, and for defining 
 a FOREIGN KEY constraint on multiple columns, use the following SQL syntax: */
